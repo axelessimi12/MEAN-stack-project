@@ -1,0 +1,213 @@
+<form  #f="ngForm">
+
+  <section class="h-100 h-custom gradient-custom-2">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12">
+          <div class="card card-registration card-registration-2" style="border-radius: 15px;">
+            <div class="card-body p-0">
+              <div class="row g-0">
+                <div class="col-lg-6">
+                  <div class="p-5">
+                    <h3 class="fw-normal mb-5" style="color: green;">General Information</h3>
+  
+                    <div class="row">
+                      <div class="col-md-6 mb-4 pb-2">
+  
+                        <div class="form-outline">
+                          <input type="text" id="form3Examplev2" class="form-control form-control-lg" name="nom"  placeholder="nom du patient" [(ngModel)]="patient.nom" required #nom="ngModel" />
+                          <label class="form-label" for="form3Examplev2">Nom</label>
+                          <div class="alert alert-danger" *ngIf="nom.invalid && nom.touched">Entrez le nom du patient </div>
+                        </div>
+  
+                      </div>
+                      <div class="col-md-6 mb-4 pb-2">
+  
+                        <div class="form-outline">
+                          <input type="text" id="form3Examplev3" class="form-control form-control-lg"  name="prenom"  placeholder="prenom du patient" [(ngModel)]="patient.prenom" required #prenom="ngModel" />
+                          <label class="form-label" for="form3Examplev3" >Prenom</label>
+                          <div class="alert alert-danger" *ngIf="prenom.invalid && prenom.touched">Entrez le prenom du patient </div>
+                        </div>
+  
+                      </div>
+  
+                      
+                    <div class="mb-4 pb-2">
+                      <div class="form-outline">
+                        <input type="text" id="form3Examplev4" class="form-control form-control-lg" name="lieu"  placeholder="lieu de naissance patient" [(ngModel)]="patient.lieu" required #lieu="ngModel"/>
+                        <label class="form-label" for="form3Examplev4">Lieu de naissance</label>
+                        <div class="alert alert-danger" *ngIf="lieu.invalid && lieu.touched">lieu de naissance manquant</div>
+                      </div>
+                    </div>
+  
+                    
+                    </div>
+  
+                    <div class="form-group">
+                      <div class="row">
+                        <legend class="col-md-6 mb-4 pb-2">Sexe</legend>
+                        <div class="col-sm-10">
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="sexe" id="femme" value="Femme" [(ngModel)]="patient.sexe" checked>
+                            <label class="form-check-label" for="femme">
+                              Femme
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="sexe" id="homme" value="Homme" [(ngModel)]="patient.sexe">
+                            <label class="form-check-label" for="homme">
+                              Homme
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+  
+  <br>
+  
+                    <div class="row">
+  
+                      <div class="col-md-7 mb-4 pb-2">
+  
+                        <div class="form-outline form-white">
+                          <input type="text" id="form3Examplea5" class="form-control form-control-lg" name="taille"  placeholder="taille du patient" [(ngModel)]="patient.taille" required #taille="ngModel"/>
+                          <label class="form-label" for="form3Examplea5">Taille</label>
+                          <div class="alert alert-danger" *ngIf="taille.invalid && taille.touched">Entrez le taille du patient en Cm</div>
+                        </div>
+  
+                      </div>
+  
+                      <div class="col-md-7 mb-4 pb-2">
+  
+                        <div class="form-outline form-white">
+                          <input type="text" id="form3Examplea5" class="form-control form-control-lg" name="poids"  placeholder="poids du patient" [(ngModel)]="patient.poids" required #poids="ngModel" />
+                          <label class="form-label" for="form3Examplea5">Poids</label>
+                          <div class="alert alert-danger" *ngIf="poids.invalid && poids.touched">Entrez le poids du patient en Kg </div>
+                        </div>
+  
+                      </div>
+  
+                    </div>
+  
+  
+  
+  
+                    <div class="row">
+                      <div class="col-md-6 mb-4 pb-2 mb-md-0 pb-md-0">
+  
+                        <div class="form-outline">
+                          <input type="text" id="form3Examplev5" class="form-control form-control-lg" name="maladie"  placeholder="maladie du patient" [(ngModel)]="patient.maladie" required #maladie="ngModel"/>
+                          <label class="form-label" for="form3Examplev5">Maladie</label>
+                          <div class="alert alert-danger" *ngIf="maladie.invalid && maladie.touched"> Entrez la maladie du patient </div>
+                        </div>
+  
+                      </div>
+  
+                    </div>
+  
+  
+                    <div class="row">
+                      <div class="col-md-6 mb-4 pb-2 mb-md-0 pb-md-0">
+  
+                        <textarea class="form-control" id="Description" name="desc_patient" rows="3"  cols="10" [(ngModel)]="patient.desc_patient" required #desc="ngModel"></textarea>
+                        <label for="Description">Description du patient</label>
+                        <div class="alert alert-danger" *ngIf="desc.invalid && desc.touched"> Description manquante </div>
+  
+                      </div>
+  
+                    </div>
+  
+                  </div>
+                </div>
+                <div class="col-lg-6 bg-indigo text-white">
+                  <div class="p-5">
+                    <h3 class="fw-normal mb-5"> Details</h3>
+  
+                    <div class="mb-4 pb-2">
+                      <div class="form-outline form-white">
+                        <input type="text" id="form3Examplea2" class="form-control form-control-lg" name="adresse.ville"  placeholder="ville" [(ngModel)]="adresse.ville" required #ville="ngModel"/>
+                        <label class="form-label" for="form3Examplea2">Ville</label>
+                        <div class="alert alert-danger" *ngIf="ville.invalid && ville.touched"> Entrez la ville du patient </div>
+                      </div>
+                    </div>
+  
+                    <div class="row">
+                      <div class="col-md-5 mb-4 pb-2">
+  
+                        <div class="form-outline form-white">
+                          <input type="text" id="form3Examplea4" class="form-control form-control-lg" name="adresse.zip"  placeholder="zip" [(ngModel)]="adresse.zip" required #zip="ngModel"/>
+                          <label class="form-label" for="form3Examplea4">Code Postal </label>
+                          <div class="alert alert-danger" *ngIf="zip.invalid && zip.touched">Code postal manquant </div>
+                        </div>
+  
+                      </div>
+                      <div class="col-md-7 mb-4 pb-2">
+  
+                        <div class="form-outline form-white">
+                          <input type="text" id="form3Examplea5" class="form-control form-control-lg" name="adresse.region"  placeholder="region" [(ngModel)]="adresse.region" required #region="ngModel"/>
+                          <label class="form-label" for="form3Examplea5">Region</label>
+                          <div class="alert alert-danger" *ngIf="region.invalid && region.touched">Region manquante</div>
+                        </div>
+  
+                      </div>
+  
+                      <div class="col-md-7 mb-4 pb-2">
+  
+                        <div class="form-outline form-white">
+                          <input type="text" id="form3Examplea5" class="form-control form-control-lg" name="adresse.rue"  placeholder="rue" [(ngModel)]="adresse.rue" required #rue="ngModel"/>
+                          <label class="form-label" for="form3Examplea5">Numero de rue</label>
+                          <div class="alert alert-danger" *ngIf="rue.invalid && rue.touched">Entrez la rue du patient </div>
+                        </div>
+  
+                      </div>
+  
+                    </div>
+  
+                    <div class="mb-4 pb-2">
+                      <div class="form-outline form-white">
+                        <input type="text" id="form3Examplea6" class="form-control form-control-lg" name="adresse.pays"  placeholder="pays de residence" [(ngModel)]="adresse.pays" required #pays="ngModel"/>
+                        <label class="form-label" for="form3Examplea6">Pays</label>
+                        <div class="alert alert-danger" *ngIf="pays.invalid && pays.touched"> Entrez le pays du patient </div>
+                      </div>
+                    </div>
+  
+                    <div class="row">
+  
+                      <div class="col-md-7 mb-4 pb-2">
+  
+                        <div class="form-outline form-white">
+                          <input type="text" id="form3Examplea8" class="form-control form-control-lg"  name="phone"  placeholder="telephone du patient" [(ngModel)]="patient.phone" required #phone="ngModel"/>
+                          <label class="form-label" for="form3Examplea8">Telephone </label>
+                          <div class="alert alert-danger" *ngIf="phone.invalid && phone.touched">Contact du patient </div>
+                        </div>
+  
+                      </div>
+                    </div>
+  
+                    <div class="mb-4">
+                      <div class="form-outline form-white">
+                        <input type="text" id="form3Examplea9" class="form-control form-control-lg" name="email" placeholder="addresse email" [(ngModel)]="patient.email" required #email="ngModel"
+                        pattern="[a-zA-z0-9]+@[a-zA-z0-9]+.[a-zA-z0-9]{2,4}"/>
+                        <label class="form-label" for="form3Examplea9">Votre Email</label>
+
+                        <div class="alert alert-danger" *ngIf="email.errors && email.touched">
+                          <div *ngIf="email.errors.required"> Email manquant</div>
+                          <div *ngIf="email.errors.pattern">Verifiez la syntaxe de l' adresse mail</div>
+                         </div>
+
+                      </div>
+                    </div>
+  
+                    <button type="button" class="btn btn-light btn-lg" data-mdb-ripple-color="dark"  (click)="addPatient()" [disabled]="f.invalid" >Ajouter</button>
+  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</form>

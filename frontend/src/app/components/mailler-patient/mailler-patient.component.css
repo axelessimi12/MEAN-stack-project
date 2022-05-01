@@ -1,0 +1,22 @@
+
+
+.form-container {
+    height: auto;
+    border: 1px solid #e6e6e6;
+    background: none;
+    width: 700px;
+    padding: 18px;
+    margin: 18px;
+    align-items: center;
+}
+
+.form-group {
+    padding: 0.5rem;
+}
+
+.adresse-container{
+
+    display: flex;
+}
+
+
