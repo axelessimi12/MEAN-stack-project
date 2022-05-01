@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<h2>Fiche medicale du patient {{patient.name }}</h2>
+
+<form method="post" action="/fiche_med/ajouter/{{patient._id}}">
+	<label>Maladie Infantile</label><input type="text" name="maladie_infantiles" placeholder="Maladie Infantile">
+	<br>
+
+	<br>
+	<label>Allergies</label><input type="text" name="allergies" placeholder="Allergies">
+	<br>
+
+    <br>
+	<label>vaccins </label><input type="text" name="vaccins" placeholder="Vaccins">
+	<br>
+
+	<br>
+    <label>Fumeur</label
+    <br>
+	<input type="radio" name="fumeur" id="oui" value="oui">
+    <label for="oui">Oui</label><br>
+
+    <input type="radio" name="fumeur" id="non" value="non">
+    <label for="non">Non</label><br>
+
+    <br>
+	<label>Phone </label><input type="hidden" name="phone" placeholder="Telephone portable">
+	<br>
+
+    <br>
+	<label>Suivi patient</label>
+    <br>
+    <textarea id="last_consultation" name="last_consultation"
+          rows="5" cols="33" placeholder="ce sujet souffre de ..."> 
+    </textarea>
+	<br>
+
+	<input type="submit" name="" value="ajouter">
+</form>
+
+</body>
+</html>

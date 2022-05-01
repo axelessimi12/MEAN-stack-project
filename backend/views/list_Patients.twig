@@ -1,0 +1,25 @@
+
+
+{% extends "layout.twig" %}
+
+
+{% block content %}
+<form method="get" action="/patient/ajouter">
+<input type="submit" value="Ajouter patient"> 
+</form>
+<h1>Listes des Patients</h1>
+<br>
+{% for patient in list_de_patients %}
+    <h3>Nom: {{patient.nom}}, Prenom: {{patient.prenom}}, Maladie: {{patient.maladie}} <a href="/patient/delete/{{patient._id}}" >Delete</a> <a href="/patient/update/{{patient._id}}" >Update</a> <a href="/patient/mailler/{{patient._id}}" >Mail</a> 
+        <a href="/fiche_med/pdf/{{patient._id}}" >PDF</a>
+    
+    {% if patient.fiche_medicale is not defined %}
+    <a href="/fiche_med/ajouter/{{patient._id}}" >creer Fiche medicale</a>  
+    {% else %}
+    <a href="/fiche_med/update/{{patient._id}}" > modifier Fiche medicale</a>
+    {% endif%}
+    </h3>
+
+{% endfor%}
+
+{% endblock %}

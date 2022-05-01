@@ -1,0 +1,17 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+<h1> {{title}}</h1>
+<form action="/patient/update/{{patient._id}}" method="post">
+<label> Nom: </label>  <input type="text" name="nom" value="{{patient.nom}}">
+<br>
+<label> Prenom: </label>  <input type="text" name="prenom" value="{{patient.prenom}}">
+<br>
+<label> Email: </label>  <input type="text" name="email" value="{{patient.email}}">
+<br>
+<label> Maladie: </label>  <input type="text" name="maladie" value="{{patient.maladie}}">
+<br>
+<input type="submit" value="Save" /> 
+</form>
+
+{% endblock %}

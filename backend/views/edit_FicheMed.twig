@@ -1,0 +1,26 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+<h1> {{title}}</h1>
+
+<br>
+<br>
+
+<h2>Fiche medicale du patient {{patient.nom }}</h2>
+<br>
+<br>
+
+
+<form action="/fiche_med/update/{{patient._id}}" method="post">
+<label> Maladie Infantile: </label>  <input type="text" name="maladie_infantiles" >
+<br>
+<label> Allergies: </label>  <input type="text" name="allergies" >
+<br>
+<label> vaccins: </label>  <input type="text" name="vaccins" >
+<br>
+<label> Suivi patient: </label>  <input type="text" name="last_consultation" >
+<br>
+<input type="submit" value="Save" /> 
+</form>
+
+{% endblock %}

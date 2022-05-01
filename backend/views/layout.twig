@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% block head %}
+            <title>{% block title %}{% endblock %} My Webpage</title>
+        {% endblock %}
+    </head>
+    <body>
+        <div id="content">
+        {% block content %}
+        {% endblock %}</div>
+        
+                <div id="footer">
+            {% block footer %}
+                &copy; Copyright 2023 by <a href="https://www.axou.com/">Axou</a>.
+                
+            {% endblock %}
+        </div>
+    </body>
+</html>

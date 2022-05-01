@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+
+<form method="post" action="/patient/ajouter">
+	<h2>Ajouter un patient</h2>
+
+	<br>
+	<label>Nom</label><input type="text" name="nom" placeholder="Nom">
+	<br>
+
+	<br>
+	<label>Prenom</label><input type="text" name="prenom" placeholder="Prenom">
+	<br>
+
+    <br>
+	<label>Email </label><input type="text" name="email" placeholder="Email">
+	<br>
+
+	<br>
+    <label>Sexe</label
+    <br>
+	<input type="radio" name="sexe" id="femme" value="femme">
+    <label for="femme">Femme</label><br>
+
+    <input type="radio" name="sexe" id="homme" value="homme">
+    <label for="homme">Homme</label><br>
+
+    <br>
+	<label>Lieu de naissance </label><input type="text" name="lieu" placeholder="Lieu de naissance">
+	<br>
+
+	<br><label>Adresse </label><br>
+
+    <br>
+
+    <label for="pays">Pays </label>
+    <input type="text" name="adresse.pays" id="pays">
+    
+
+    <label for="ville">Ville </label>
+    <input type="text" name="adresse.ville" id="ville" >
+    
+
+    <label for="region">Region </label>
+    <input type="text" name="adresse.region" id="region" >
+    
+
+    <label for="rue">Rue </label>
+    <input type="text" name="adresse.rue" id="rue">
+    
+
+    <label for="zip">Zip</label>
+    <input type="text" name="adresse.zip" id="zip">
+    <br>
+
+    <br>
+	<label>Phone </label><input type="text" name="phone" placeholder="Telephone portable">
+	<br>
+
+    <br>
+	<label>Taille </label><input type="text" name="taille" placeholder="Taille en cm">
+	<br>
+
+    <br>
+	<label>Poids </label><input type="text" name="poids" placeholder="Poids en Kg">
+	<br>
+
+    <br>
+	<label>Maladie </label><input type="text" name="maladie" placeholder="Maladie">
+	<br>
+
+    <br>
+	<label>Description du patient</label>
+    <br>
+    <textarea id="desc_patient" name="desc_patient"
+          rows="5" cols="33" placeholder="ce sujet souffre de ..."> 
+    </textarea>
+	<br>
+
+	<input type="submit" name="" value="ajouter">
+</form>
+
+</body>
+</html>

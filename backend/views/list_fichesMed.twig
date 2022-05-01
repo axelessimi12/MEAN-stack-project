@@ -1,0 +1,15 @@
+
+
+{% extends "layout.twig" %}
+
+
+{% block content %}
+<form method="get" action="/fiche_med/ajouter">
+</form>
+<h1>Listes des fiches medicales</h1>
+<br>
+{% for FicheMed in list_de_fichesMed %}
+    <h3>Nom: {{FicheMed.nom}}, Prenom: {{FicheMed.prenom}}, Maladie: {{FicheMed.maladie}} <a href="/fiche_med/delete/{{FicheMed._id}}" >Delete</a> <a href="/fiche_med/update/{{FicheMed._id}}" >Update</a> </h3>
+{% endfor%}
+
+{% endblock %}
