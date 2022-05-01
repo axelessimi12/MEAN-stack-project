@@ -1,0 +1,52 @@
+.patient-item{
+    text-align: center;
+  
+    width: 800px;
+    cursor: pointer;
+    display: flex;
+
+    align-items: center;
+    justify-content:space-around;
+
+}
+
+.patient-image{
+    height: 100%;
+}
+
+.patient-details{
+    display: flex;
+    font-size: 1rem;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+button{
+    text-align: center;
+    height: 100%;
+    width: 6rem;
+    border: 0.1px solid blueviolet;
+}
+
+.patient-action{
+    align-items: center;
+    justify-content:space-between;
+    gap: 1rem;
+}
+
+.patient-item:hover {
+    background-color: #1d1d1d;
+    color: white;
+  }
+
+  .patient-nom{
+      margin: 10px;
+      font-weight: bold;
+      font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .patient-prenom{
+    margin: 10px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;}

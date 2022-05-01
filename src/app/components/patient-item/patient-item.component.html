@@ -1,0 +1,37 @@
+<section class="text-dark p-5 p-lg-0 pt-lg-5 text-center text-sm-start">
+
+<div class="container">
+
+    <div class="patient-item">
+
+        <div class="patient-image">
+            <img src="https://randomuser.me/api/portraits/men/10.jpg"
+            height="50"
+            width="50"
+            alt="image patient">
+        </div>
+    
+        <div class="patient-details lead">
+            <div class="patient-nom mr-2">
+                Nom: {{patient?.nom | uppercase}}
+            </div>
+            <div class="patient-prenom mr-2">
+                Prenom: {{patient?.prenom }}
+            </div>
+        </div>
+    
+        <div class="patient-action">
+            <button type="button" class="btn btn-success " (click)="goToDetailsPatient(patient?._id)" >Details</button>
+            <button type="button" class="btn btn-danger " (click)="supprimerPatient(patient?._id)" >Supprimer</button>
+            <button type="button" class="btn btn-warning" (click)="goToUpdatePatient(patient?._id)" >Modifier</button>
+            <button type="button" class="btn btn-info"  (click)="goToMaillerPatient(patient?._id)" >Mail</button>
+            <button type="button" class="btn btn-info" (click)="PDFPatient(patient?._id)" >PDF</button>
+        </div>
+    
+    </div>
+    
+</div>
+</section>
+
+
+

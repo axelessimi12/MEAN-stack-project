@@ -1,0 +1,35 @@
+<h2>Upate patient</h2>
+
+<form>
+
+    <div class="form-container">
+    
+        <div class="form-group">
+            <label for="nom">Nom</label>
+            <input type="text" class="form-control " id="nom" name="nom" aria-describedby="emailHelp" placeholder="nom du patient" [(ngModel)]="patient.nom">
+        </div>
+    
+          <div class="form-group">
+            <label for="prenom">Prenom</label>
+            <input type="text" class="form-control " id="prenom" name="prenom" aria-describedby="emailHelp" placeholder="prenom du patient" [(ngModel)]="patient.prenom">
+          </div>
+    
+        <div class="form-group">
+          <label for="email">Adresse email </label>
+          <input type="email" class="form-control " id="email" name="email" aria-describedby="emailHelp" placeholder="addresse email" [(ngModel)]="patient.email">
+        </div>
+    
+       
+    
+        <div class="form-group">
+            <label for="maladie">Maladie</label>
+            <input type="text" class="form-control " id="maladie"  name="maladie" aria-describedby="emailHelp" placeholder="maladie du patient" [(ngModel)]="patient.maladie">
+        </div>
+
+
+
+        <button type="submit" class="btn btn-primary mb-2" (click)="updatePatient(patient._id)" >Submit</button>
+    
+    </div>
+    
+      </form>
